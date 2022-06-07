@@ -12,7 +12,7 @@ For this project, I went with an ESP-WROOM-32. This board can connect to Wifi an
 - 20x4 LCD w/ PCF8574 I2C
 - Black Plastic Hammond Enclosure (120mm x 100mm x 35mm)
 - 3ft Micro USB
-- female to female jumpers
+- 4 female to female jumpers
 
 #### Planned upgrades:
 
@@ -21,7 +21,7 @@ For this project, I went with an ESP-WROOM-32. This board can connect to Wifi an
 
 ## Server
 
-The server is very straight forward as far as express apps go. It makes a single call to the conigecko api using a formatted url. The coins in the config.toml are used to created the url and make the request. Once the data is received, it is formatted for the ESP32 and sent to it.
+The server is very straight forward as far as express apps go. It makes a single call to the conigecko api using a formatted url. The coins in the config.toml are used to create the url and make the request. Once the data is received, it is formatted for the ESP32 and sent to it.
 
 ## Code Process Overview
 
@@ -63,7 +63,7 @@ You can test the API in the browser by typing in https://localhost:1337/ticker-2
 
 ## ESP32 Setup
 
-First, make sure you have properly connected the I2C display to your board. For me, it was:
+First, make sure you have properly connected the I2C display to your ESP32. For me, it was:
 
 ```
 ESP32   PCF8574
@@ -73,9 +73,9 @@ G21-----SDA
 G22-----SCL
 ```
 
-- Plug your board into your PC - note the display should turn on, regardless of code on the board.
+- Plug your ESP32 into your PC - note the display should turn on, regardless of code on the ESP32.
 
-- Open the "pio" folder in VS Code with Platform IO installed. Use the PIO gui to open the project and then build it. This will make sure that all the libraries are downloaded and that you have the appropriate files needed to continue.
+- Open VS Code with Platform IO installed. Use the PIO gui to open the project folder "pio" and then compile it. This will make sure that all the libraries are downloaded and that you have the appropriate files needed to continue.
 
 - The serverName and Wifi credentials must be set before flashing the ESP32 - you will want to setup the server first before doing this part so that you know what your url will be.
 
@@ -88,7 +88,10 @@ const char* serverName = "http://localhost:1337/ticker-2004";
 
 ```
 
+- Flash the ESP32 and wait about 15 seconds to see the first output on the display.
+
 # Project Pics
+
 ![286215299_892385228821410_2181109550074132449_n](https://user-images.githubusercontent.com/11794877/172496313-c100eadd-b17d-441f-8a51-41213d321ce8.jpg)
 
 ![285789627_495974835547427_1162574691762965265_n](https://user-images.githubusercontent.com/11794877/172496263-3480584c-25d1-4ca6-96ae-cd6d4dfe2473.jpg)
