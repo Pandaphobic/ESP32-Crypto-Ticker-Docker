@@ -58,6 +58,8 @@ If instead you'd like to run it on your local machine,
 If done correctly, you should see
 `⚡️[Ticker-Server]: Server is running at https://localhost:1337`
 
+You can test the API in the browser by typing in https://localhost:1337/ticker-2004. Should should get a response similar to this:
+
 ## ESP32 Setup
 
 First, make sure you have properly connected the I2C display to your board. For me, it was:
@@ -70,9 +72,11 @@ G21-----SDA
 G22-----SCL
 ```
 
-Open the "pio" folder in VS Code with Platform IO installed. Use the PIO gui to open the project and then build it. This will make sure that all the libraries are downloaded and that you have the appropriate files needed to continue.
+- Plug your board into your PC - note the display should turn on, regardless of code on the board.
 
-The serverName and Wifi credentials must be set before flashing the ESP32 - you may want to setup the server first before doing this part.
+- Open the "pio" folder in VS Code with Platform IO installed. Use the PIO gui to open the project and then build it. This will make sure that all the libraries are downloaded and that you have the appropriate files needed to continue.
+
+- The serverName and Wifi credentials must be set before flashing the ESP32 - you will want to setup the server first before doing this part so that you know what your url will be.
 
 ```
 
@@ -83,3 +87,5 @@ const char* password = "idontknow";
 const char* serverName = "http://localhost:1337/ticker-2004";
 
 ```
+
+# Project Pics
