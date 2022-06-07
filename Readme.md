@@ -59,6 +59,7 @@ If done correctly, you should see
 `⚡️[Ticker-Server]: Server is running at https://localhost:1337`
 
 You can test the API in the browser by typing in https://localhost:1337/ticker-2004. Should should get a response similar to this:
+![browser_img](https://user-images.githubusercontent.com/11794877/172496023-8cba0b94-19b0-45a6-b642-0df73c5100c9.png)
 
 ## ESP32 Setup
 
@@ -79,7 +80,6 @@ G22-----SCL
 - The serverName and Wifi credentials must be set before flashing the ESP32 - you will want to setup the server first before doing this part so that you know what your url will be.
 
 ```
-
 // Wifi Setup
 const char* ssid = "figureitout";
 const char* password = "idontknow";
@@ -89,3 +89,6 @@ const char* serverName = "http://localhost:1337/ticker-2004";
 ```
 
 # Project Pics
+![286215299_892385228821410_2181109550074132449_n](https://user-images.githubusercontent.com/11794877/172496313-c100eadd-b17d-441f-8a51-41213d321ce8.jpg)
+
+![285789627_495974835547427_1162574691762965265_n](https://user-images.githubusercontent.com/11794877/172496263-3480584c-25d1-4ca6-96ae-cd6d4dfe2473.jpg)
